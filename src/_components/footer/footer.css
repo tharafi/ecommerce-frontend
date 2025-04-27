@@ -1,0 +1,8 @@
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: justify;
+  font-size: 14px;
+}
