@@ -16,7 +16,7 @@ const Categories = () => {
         <div className="row overflow-hidden relative flex gap-2.5 flex-1">
           <img className="w-full h-full object-cover" src={data[0]} alt="" />
           <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
-            <Link className="link" to="/products/7">
+            <Link className="link" to="/products/6">
             Sweatshirts
             </Link>
           </button>
@@ -24,7 +24,7 @@ const Categories = () => {
         <div className="row overflow-hidden relative flex gap-2.5 flex-1">
           <img className="w-full h-full object-cover" src={data[1]} alt="" />
           <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
-            <Link className="link" to="/products/7">
+            <Link className="link" to="/products/6">
             Shirts
             </Link>
           </button>
@@ -34,7 +34,7 @@ const Categories = () => {
         <div className="row overflow-hidden relative flex gap-2.5 flex-1">
           <img className="w-full h-full object-cover" src={data[4]} alt="" />
           <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
-            <Link className="link" to="/products/7">
+            <Link className="link" to="/products/6">
               New season
             </Link>
           </button>
@@ -50,7 +50,7 @@ const Categories = () => {
                 alt=""
               />
               <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
-                <Link className="link" to="/products/7">
+                <Link className="link" to="/products/6">
                 Jeans
                 </Link>
               </button>
@@ -64,7 +64,7 @@ const Categories = () => {
                 alt=""
               />
               <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
-                <Link className="link" to="/products/7">
+                <Link className="link" to="/products/6">
                   Men
                 </Link>
               </button>
@@ -74,7 +74,7 @@ const Categories = () => {
         <div className="row overflow-hidden relative flex gap-2.5 flex-1">
           <img className="w-full h-full object-cover" src={data[2]} alt="" />
           <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
-            <Link className="link" to="/products/7">
+            <Link className="link" to="/products/6">
               Accessories
             </Link>
           </button>
