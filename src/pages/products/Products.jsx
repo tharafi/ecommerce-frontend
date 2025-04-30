@@ -23,7 +23,7 @@ const Products = () => {
   };
 
   return (
-    <div className="products px-[50px] py-[30px] flex ">
+    <div className="products px-[50px] py-[30px] flex gap-[20px]">
       {loading ? (
         "loading"
       ) : (

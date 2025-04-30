@@ -7,7 +7,7 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import { Button } from '@mui/material';
 const Contact = () => {
   return (
-    <div className='h-[80px] bg-blue-600 text-white flex items-center max-sm:flex-wrap min-md:px-[10px] xl:px-[250px] lg:px-[100px]  justify-around mb-[70px]'>
+    <div className='py-5 bg-blue-600 text-white flex items-center justify-around mb-[70px] max-sm:flex-col max-sm:gap-2 max-md:flex-col max-md:gap-2 max-md:px-[10px] xl:px-[250px] lg:px-[100px]'>
       <div className="l">
         <p className='capitalize font-semibold text-[18px]'>BE IN TOUCH WITH US :</p>
       </div>

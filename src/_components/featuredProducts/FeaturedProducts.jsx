@@ -9,7 +9,7 @@ const FeaturedProducts = ({ type }) => {
   
   return (
     <div className="featured my-[200px] mx-[100px]">
-      <div className="top flex items-center  justify-between mb-[50px] font-bold">
+      <div className="top flex items-center  justify-between mb-[50px] font-bold max-sm:flex-col max-sm:gap-2.5 max-sm:text-center">
         <h1 className="flex-[2] capitalize text-2xl">{type} products</h1>
         <p className="flex-[3] text-gray-500">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
