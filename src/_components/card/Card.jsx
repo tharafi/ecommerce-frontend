@@ -2,8 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Card = ({item}) => {
-  const imageUrl = `${import.meta.env.VITE_UPLOAD_URL}${item?.img?.url}`; 
-  const image2Url = `${import.meta.env.VITE_UPLOAD_URL}${item?.img2?.url}`;  
+  const imageUrl = item?.img?.url?.startsWith('http')
+  ? item.img.url
+  : `${import.meta.env.VITE_UPLOAD_URL}${item.img.url}`;
+
+const image2Url = item?.img2?.url?.startsWith('http')
+  ? item.img2.url
+  : `${import.meta.env.VITE_UPLOAD_URL}${item.img2.url}`;
+
   return (
     <Link to={`/product/${item.id}`}>
       <div className="card  flex flex-col gap-[10px] mb-[50px]">
