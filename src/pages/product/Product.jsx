@@ -19,12 +19,21 @@ const Product = () => {
   );
 
   const product = data?.[0]; // أول منتج من نتيجة الفلترة
-  const imageUrl = `${import.meta.env.VITE_UPLOAD_URL}${product?.img?.url}`;
-  const image2Url = `${import.meta.env.VITE_UPLOAD_URL}${product?.img2?.url}`;
+  const imageUrl = product?.img?.url?.startsWith("http")
+    ? product.img.url
+    : `${import.meta.env.VITE_UPLOAD_URL}${product?.img?.url}`;
+
+  const image2Url = product?.img2?.url?.startsWith("http")
+    ? product.img2.url
+    : `${import.meta.env.VITE_UPLOAD_URL}${product?.img2?.url}`;
 
   useEffect(() => {
     if (product?.img) {
-      setSelectedImg(`${import.meta.env.VITE_UPLOAD_URL}${product.img.url}`);
+      setSelectedImg(
+        product?.img?.url?.startsWith("http")
+          ? product.img.url
+          : `${import.meta.env.VITE_UPLOAD_URL}${product.img.url}`
+      );
     }
   }, [product]);
 
@@ -66,9 +75,7 @@ const Product = () => {
             </div>
           </div>
           <div className="right flex-[1] flex flex-col gap-3.5 px-10">
-            <h1 className="font-normal text-2xl">
-              {product?.title}
-            </h1>
+            <h1 className="font-normal text-2xl">{product?.title}</h1>
             <div className="price text-blue-400 font-normal text-3xl">
               ${product?.price}
             </div>
@@ -92,16 +99,21 @@ const Product = () => {
                 +
               </button>
             </div>
-            <button onClick={()=> (dispatch(addToCart(
-              {
-                id: product.id,
-                title: product.title,
-                desc: product.desc,
-                price: product.price,
-                img: imageUrl,
-                quantity: quantity,
+            <button
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    id: product.id,
+                    title: product.title,
+                    desc: product.desc,
+                    price: product.price,
+                    img: imageUrl,
+                    quantity: quantity,
+                  })
+                )
               }
-            )))} className="add font-medium my-2 p-2.5 bg-blue-500 text-white w-[250px] cursor-pointer flex items-center justify-center gap-2.5">
+              className="add font-medium my-2 p-2.5 bg-blue-500 text-white w-[250px] cursor-pointer flex items-center justify-center gap-2.5"
+            >
               <AddShoppingCartIcon /> ADD TO CART
             </button>
             <div className="link flex gap-10 text-blue-400 cursor-pointer">
