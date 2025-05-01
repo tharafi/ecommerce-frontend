@@ -39,7 +39,7 @@ const image2Url = product?.img2?.url?.startsWith("http")
   }, [product]);
 
   return (
-    <div className="product py-[20px] px-[50px] flex">
+    <div className="product py-[20px] px-[50px] flex max-sm:px-[20px]">
       {loading ? (
         "loading"
       ) : (
