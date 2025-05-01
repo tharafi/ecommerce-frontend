@@ -18,7 +18,7 @@ const FeaturedProducts = ({ type }) => {
           asperiores veniam.
         </p>
       </div>
-      <div className="bottom flex items-center justify-center gap-[50px]">
+      <div className="bottom flex items-center justify-center gap-[50px] flex-wrap">
         {loading ? "loading" : error ? "something went wrong! " : data?.map((item) => (
           <Card item={item} key={item.id} />
         ))}
