@@ -15,7 +15,7 @@ const Categories = () => {
       <div className="col flex-[1] flex flex-col gap-2.5">
         <div className="row overflow-hidden relative flex gap-2.5 flex-1">
           <img className="w-full h-full object-cover" src={data[0]} alt="" />
-          <button className="absolute min-w-[60px]  h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white max-md: text-wrap">
+          <button className="absolute min-w-[60px] w-fit h-[40px] p-2 top-0 left-0  bottom-0 right-0 m-auto cursor-pointer border-none uppercase bg-white font-medium hover:bg-blue-600 hover:text-white">
             <Link className="link text-[12px]" to="/products/2">
             Sweatshirts
             </Link>
