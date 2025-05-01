@@ -52,7 +52,9 @@ const image2Url = product?.img2?.url?.startsWith("http")
                 alt=""
                 onClick={() =>
                   setSelectedImg(
-                    `${import.meta.env.VITE_UPLOAD_URL}${product?.img?.url}`
+                    product?.img?.url?.startsWith("http")
+                      ? product.img.url
+                      : `${import.meta.env.VITE_UPLOAD_URL}${product.img.url}`
                   )
                 }
               />
